@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Back', articles_path %>
+<%= render partial: 'article', layout: 'box', locals: {article: @article} %>
+
+<%# render(layout: 'box', locals: {article: @article}) do %>
+  <%#= div_for(article) do %>
+    <p><%#= article.body %></p>
+  <%# end %>
+<%# end %>
