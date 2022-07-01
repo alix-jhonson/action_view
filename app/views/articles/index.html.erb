@@ -31,7 +31,9 @@
   <p>Welcome! The date and time is <%= Time.now %></p>
 <% end %>
 
-
+<%= option_groups_from_collection_for_select(@continents, :countries, :name, :id, :name, 3)%>
+<% options_for_select([ "VISA", "MasterCard" ])%>
+<% collection_check_boxes(:article, :author_ids, Author.all, :id, :name_with_initial)%>
 
 
 
