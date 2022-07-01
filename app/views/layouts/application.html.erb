@@ -9,6 +9,14 @@
 <body>
 
 <%= yield %>
-
+<html>
+  <head>
+    <title>Welcome!</title>
+    <%= yield :special_script %>
+  </head>
+  <body>
+    <p>Welcome! The date and time is <%= Time.now %></p>
+  </body>
+</html>
 </body>
 </html>

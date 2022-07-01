@@ -27,6 +27,10 @@
   <td><%= article.id %></td>
 <% end %>
 
+<% @greeting = capture do %>
+  <p>Welcome! The date and time is <%= Time.now %></p>
+<% end %>
+
 
 
 
