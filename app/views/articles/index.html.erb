@@ -8,10 +8,24 @@
 
 <p>Here are a few of our fine products:</p>
 <img src="/assets/photo.png" />
+
+
 <%= date_select("article", "published_on")%>
      <%= datetime_select("article", "published_on")%>
 <%=distance_of_time_in_words(Time.now, Time.now + 15.seconds)%>
 <%=select_minute(Time.now + 6.hours)%>
+
+<%= content_tag_for(:tr, @article) do %>
+  <td><%= @article.title %></td>
+<% end %>
+
+<%= content_tag_for(:tr, @article, class: "frontpage") do %>
+  <td><%= @article.title %></td>
+<% end %>
+<br>
+<%= content_tag_for(:tr, @articles) do |article| %>
+  <td><%= article.id %></td>
+<% end %>
 
 
 
