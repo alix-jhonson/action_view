@@ -15,3 +15,17 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+<%= form_for @article do |f| %>
+ comments <%= f.text_area :body %><br>
+ Password  <%= f.password_field :password %>
+ Confirm Password<%= f.password_field :password_confirmation %>
+  <%check_box_tag 'accept'%>
+  <p>
+    <b>Country</b><br />
+    <%= f.radio_button :body, 'USA' %> USA<br />
+    <%= f.radio_button :body, 'Canada' %> Canada<br />
+    <%= f.radio_button :body, 'Mexico' %> Mexico<br />
+    <%= f.button :submit %>
+  </p>
+<% end %>
